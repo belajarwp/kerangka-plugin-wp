@@ -62,5 +62,5 @@
     <p>Halo terimakasih sudah mendownload plugin "Kerangka Plugin WP"</p>
 </div>
           <?php
-      }
+      }    
   }
