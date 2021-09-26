@@ -87,3 +87,18 @@
         var_dump(WP_PLUGIN_DIR);
       }    
   }
+
+
+  function ganti_login_logo(){
+      ?>
+<style type="text/css">
+body.login #login h1 a{
+    background-image:none,url(<?php echo plugin_dir_url(__FILE__);?>logo-dankedev.png);
+ 
+</style>
+      <?php
+  }
+
+
+
+  add_action( 'login_enqueue_scripts','ganti_login_logo',10 );
