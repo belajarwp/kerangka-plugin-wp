@@ -54,6 +54,11 @@
       add_action( 'admin_menu','kerangka_plugin_menu' );
   }
 
+
+  /**
+   * Function menu page
+   * berisikan konten yang akan ditampilkan di halaman menu admin
+   */
   if(!function_exists('kerangka_plugin_menu_page')){
       function kerangka_plugin_menu_page(){
           ?>
@@ -62,5 +67,24 @@
     <p>Halo terimakasih sudah mendownload plugin "Kerangka Plugin WP"</p>
 </div>
           <?php
+
+        /**
+         * Variable
+         */
+
+        $file = __FILE__;
+        $dir = __DIR__;
+        var_dump($dir);
+        $plugin_url = plugins_url('file-javascript.js');
+        $plugin_dir_url =plugin_dir_url(__FILE__);
+        $plugin_dir_path = plugin_dir_path(__FILE__);
+        $plugin_basename = plugin_basename(__DIR__);
+
+        $home_path = get_home_path();
+        $home_url = home_url( );
+        $all = compact('file','plugin_url','plugin_dir_url','plugin_dir_path','plugin_basename','home_path','home_url');
+        var_dump($all);
+        var_dump(WP_PLUGIN_DIR);
       }    
   }
+
