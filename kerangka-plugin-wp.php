@@ -87,7 +87,3 @@
         var_dump(WP_PLUGIN_DIR);
       }    
   }
-
-
-
-
